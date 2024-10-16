@@ -24,3 +24,15 @@ var minimumSteps = function (s) {
   }
   return res;
 };
+
+var minimumSteps2 = function (s) {
+  let l = 0;
+  let res = 0;
+  for (let r = 0; r < s.length; r++) {
+    if (s[r] === "0") {
+      res += r - l;
+      l += 1;
+    }
+  }
+  return res;
+};
